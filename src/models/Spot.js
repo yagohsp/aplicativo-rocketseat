@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 
-const SpotSchema = mongoose.Schema({
+const SpotSchema = new mongoose.Schema({
     thumbnail: String,
     company: String,
     price: Number,
     techs: [String],
     user: {
-        type: mongoose.SchemaTypes.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     }
 });
